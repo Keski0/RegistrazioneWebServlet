@@ -2,8 +2,6 @@ package it.betacom.entity;
 
 import java.sql.Date;
 
-import javax.servlet.http.HttpServletRequest;
-
 public class Utente {
 	
 	private int id;
@@ -36,17 +34,18 @@ public class Utente {
 		this.trovato = trovato;
 	}
 	
-	public Utente(HttpServletRequest request) {
-		
-		nome = request.getParameter("nome");
-		cognome = request.getParameter("cognome");
-		sesso = request.getParameter("sesso");
-		luogoNascita = request.getParameter("luogoNascita");
-		provincia = request.getParameter("provincia");
-		dataNascita = Date.valueOf(request.getParameter("dataNascita"));
-		codiceFiscale = request.getParameter("codiceFiscale");
-		password = request.getParameter("password");
-		trovato = request.getParameter("trovato");
+	public Utente(String nome, String cognome, String sesso, String luogoNascita, String provincia,
+			Date dataNascita, String codiceFiscale, String password, String trovato) {
+		super();
+		this.nome = nome;
+		this.cognome = cognome;
+		this.sesso = sesso;
+		this.luogoNascita = luogoNascita;
+		this.provincia = provincia;
+		this.dataNascita = dataNascita;
+		this.codiceFiscale = codiceFiscale;
+		this.password = password;
+		this.trovato = trovato;
 		
 	}
 	

@@ -5,8 +5,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import org.apache.tomcat.jdbc.pool.interceptor.StatementCache;
-
 public class Connessione {
 	
 	private Connection connection;
